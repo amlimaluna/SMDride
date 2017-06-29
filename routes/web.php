@@ -13,7 +13,7 @@ Route::get('/', function () {
 Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('rides','RidesController');
-	Route::resource('comments','CommentsController');
+	Route::resource('rides.comments', 'CommentsController');
 	
 
 });

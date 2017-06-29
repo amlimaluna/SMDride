@@ -44,7 +44,7 @@
                         <p><b>Data de Partida:</b> {{ $ride->date->format('d/m/Y H:i') }}</p>
                         <p><b>Passageiros:</b> {{ $ride->passengers->pluck('name')->implode(', ') }}</p>
 
-                        @include('comments.index', ['comments' => $ride->comments->take(3) ])
+                        @include('comments.index', ['comments' => $ride->comments->comments()->orderBy('created_at', 'desc')->take(3)->get()])
                     </div>
                 </div>
             </div>

@@ -29,23 +29,10 @@
                         <p><b>Data de Partida:</b> {{ $ride->date->format('d/m/Y H:i') }}</p>
                         <p><b>Passageiros:</b> {{ $ride->passengers->pluck('name')->implode(', ') }}</p>
 
-                        @include('comments.index', [ 'comments' => $ride->comments ])
+                        @include('comments.index', [ 'comments' => $ride->comments()->orderBy('created_at', 'desc')->get() ])
                     </div>
 
-                    <form method="post" action="{{ route('comments.store') }}">
-
-                        {{ csrf_field() }}
-
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="text"/>
-
-
-                            @include('partials.input-errors', ['input' => 'text'])
-                        </div>
-
-                        <button type="submit" class="btn btn-primary">Comentar</button>
-
-                    </form>
+                    @include('comments.create', $ride)
 
                 </div>
             </div>

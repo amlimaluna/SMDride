@@ -8,6 +8,7 @@ use SMDRide\Carpooling\Contracts\ICommentsRepository;
 use SMDRide\Carpooling\CommentsManager;
 use SMDRide\Http\Requests\CommentRequest;
 use SMDRide\Comment;
+use SMDRide\Ride;
 
 class CommentsController extends Controller
 {
@@ -16,9 +17,14 @@ class CommentsController extends Controller
         $this->authorizeResource(Comment::class);
     }
 
-    public function store(CommentRequest $request)
+    public function store(CommentRequest $request, Ride $ride)
     {
-        Comment::create($request->only('text'));
+        $ride->comments()->create([
+            'text'    => $request->get('text'),
+            'user_id' => $request->user()->id
+        ]);
+
+        return redirect()->back()->with('success', 'messages.success.created-comment');
     }
 
     public function destroy(Comment $comment)

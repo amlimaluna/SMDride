@@ -12,6 +12,7 @@ class Ride extends Model
         'address',
         'date',
         'car',
+        'user_id'
     ];
 
     protected $dates = [self::CREATED_AT, self::UPDATED_AT, 'date'];
