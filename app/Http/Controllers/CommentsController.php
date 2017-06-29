@@ -11,19 +11,19 @@ use SMDRide\Comment;
 
 class CommentsController extends Controller
 {
-    //
-
-
- public function store(CommentRequest $request)
+    public function __construct()
     {
-     Comment::create ($request->only ('text'));
+        $this->authorizeResource(Comment::class);
     }
 
-	
-	
-public function destroy(Comment $comment)
+    public function store(CommentRequest $request)
+    {
+        Comment::create($request->only('text'));
+    }
+
+    public function destroy(Comment $comment)
     {
         $comment->delete();
-        return redirect()->back()->with('success', 'messages.success.deleted-ride');
+        return redirect()->back()->with('success', 'messages.success.deleted-comment');
     }
 }

@@ -1,6 +1,8 @@
-<h5 style="padding-top: 20px; display: block">Últimos comentários ({{ $comments->count() }})</h5>
+@if ($comments->count() > 1)
+<h5 style="padding-top: 20px; display: block">Últimos {{ $comments->count() }} comentários</h5>
+@endif
 
-@foreach ($comments->take(5) as $comment)
+@foreach ($comments as $comment)
     <div class="comment">
         <h4 class="comment-heading">
             {{ $comment->user->name }}
@@ -11,5 +13,3 @@
         </p>
     </div>
 @endforeach
-
-<small style="padding-top: 20px; display: block">Exibindo {{ $comments->take(5)->count() }} de {{ $comments->count() }}</small>

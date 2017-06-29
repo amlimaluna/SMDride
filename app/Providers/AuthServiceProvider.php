@@ -4,6 +4,10 @@ namespace SMDRide\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
+use SMDRide\Comment;
+use SMDRide\Policies\CommentPolicy;
+use SMDRide\Policies\RidePolicy;
+use SMDRide\Ride;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -13,7 +17,8 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        'SMDRide\Model' => 'SMDRide\Policies\ModelPolicy',
+        Ride::class => RidePolicy::class,
+        Comment::class => CommentPolicy::class,
     ];
 
     /**

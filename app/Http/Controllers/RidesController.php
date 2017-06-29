@@ -14,6 +14,11 @@ use SMDRide\Ride;
 
 class RidesController extends Controller
 {
+    public function __construct()
+    {
+        $this->authorizeResource(Ride::class);
+    }
+
     /**
      * Display a listing of the resource.
      *
