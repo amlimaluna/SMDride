@@ -9,6 +9,7 @@
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('rides.index') }}"> Voltar</a>
+
             </div>
         </div>
     </div>

@@ -1,11 +1,12 @@
-@extends('layouts.default')
+@extends('layouts.app')
  
 @section('content')
+
 
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> Mostrar carona:</h2>
+                <h2> Embarque nessa carona:</h2>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('rides.index') }}"> Voltar</a>
@@ -15,26 +16,39 @@
 
     <div class="row">
 
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Address:</strong>
-                {{ $rides->address }}
-            </div>
-        </div>
+       <div class="col-md-12">
+                <div class="portlet light">
+                    <div class="portlet-title">
+                        <div class="caption">
+                            <i class="fa fa-gift"></i>Destino: {{ $ride->address }}
 
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Car:</strong>
-                {{ $rides->car }}
+                    </div>
+					<br><br>
+                    <div class="portlet-body">
+                        <p><b>Motorista:</b> {{ $ride->driver->name }}</p>
+                        <p><b>Data de Partida:</b> {{ $ride->date->format('d/m/Y H:i') }}</p>
+                        <p><b>Passageiros:</b> {{ $ride->passengers->pluck('name')->implode(', ') }}</p>
+
+                        @include('comments.index', ['comments' => $ride->comments ])
+                    </div>
+					
+				   <form method="post" action="{{ route('comments.store') }}" >
+
+                   {{ csrf_field() }}
+
+                <div class="form-group">
+					<input type="text" class="form-control" name="text"/>
+					
+				
+                    @include('partials.input-errors', ['input' => 'text'])
+                </div>
+				
+				<button type="submit" class="btn btn-primary">Comentar</button>
+				
+				</form>
+					
+                </div>
             </div>
-        </div>
-		
-		div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Date:</strong>
-                {{ $rides->date }}
-            </div>
-        </div>
 
     </div>
 

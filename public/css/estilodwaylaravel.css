@@ -1,0 +1,105 @@
+html, body {
+	background-color: #fff;
+	color: #674ea7;
+	font-family: 'Raleway', sans-serif;
+	/*font-family: 'Playfair Display', serif;*/
+	font-weight: 400;
+	height: 100vh;
+	margin: 0px;
+				
+}
+body{
+	background-image: url("https://image.freepik.com/fotos-gratis/sun-no-horizonte-da-estrada_1088-57.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	
+	
+}
+.full-height {
+	height: 100vh;
+}
+
+.flex-center {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}
+
+.position-ref {
+	position: relative;
+}
+
+.top-right {
+	width: 100%;
+	position: absolute;
+	height: 6vh;
+	top: 0%;
+	background: #674ea7;
+	text-align: right;
+	padding-top: 10px;
+}
+
+.content {
+	text-align: center;
+}
+
+.title {
+	font-size: 84px;
+}
+
+.m-b-md {
+	margin-bottom: 30px;
+}
+.conteudo{
+	width: 90%;
+	margin: 0 auto;
+	background: #FFF;
+	text-align:justify;
+}
+
+.links > a {
+	color: #F2B959;
+	padding: 0 25px;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: .1rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.meuMenu >a {
+    color: #F2B959;
+	padding: 5px 25px;
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: .1rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	background: #674ea7;
+	border-radius: 10px;
+	margin: 10px;
+	
+	
+}
+.fixar {
+    position:fixed;
+    top: 0%;
+	z-index: 9999;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	background: #674ea7;
+	height: 6vh;
+	padding-top: 10px;
+	text-align: center
+}
+
+.hidden {
+	display: none;
+}
+
+.show > .hidden {
+	display: inline;
+}

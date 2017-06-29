@@ -1,8 +1,10 @@
 @extends('layouts.app')
  
 @section('content')
-
-    <div class="page-title text-center" style="margin-bottom: 30px">
+<head>
+	<link href="{{ asset('/images/favicon.png') }}" rel="shortcut icon">
+    </head>
+	<div class="page-title text-center" style="margin-bottom: 30px">
         <h1>
             Mural de Caronas <br/>
             <small>Escolha pra onde você vai</small>
@@ -31,8 +33,9 @@
                             <i class="fa fa-gift"></i>Destino: {{ $ride->address }}
                         </div>
                         <div class="actions">
-                            <a href="javascript:;" class="btn green btn-sm">
-                                <i class="fa fa-share icon-black"></i> Quero ir!
+                          
+						<a class="btn btn-info" href="{{ route('rides.show',$ride->id) }}">
+						      <i class="fa fa-share icon-black"></i> Quero ir!
                             </a>
                         </div>
                     </div>
