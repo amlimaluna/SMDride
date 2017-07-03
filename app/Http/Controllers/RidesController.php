@@ -111,8 +111,9 @@ class RidesController extends Controller
 
 	public function addPassenger (Ride $ride, RideRequest $request)
 	{
-	$ride->passengers()->attach($user->id);
-	$user_id = $request->get('user_id'); 
+		$user = User::find ($user_id);
+		$ride->passengers()->attach($user->id);
+	
 	
 	} 
 	
