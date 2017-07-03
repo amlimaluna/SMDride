@@ -1,23 +1,76 @@
+
 html, body {
 	background-color: #fff;
 	color: #674ea7;
-	font-family: 'Raleway', sans-serif;
-	/*font-family: 'Playfair Display', serif;*/
-	font-weight: 400;
 	height: 100vh;
 	margin: 0px;
 				
 }
+a {
+	text-decoration: none;
+
+}
+
+.blur{
+	background-color: rgba(25, 25, 25, 0.5);
+	font-family: "Raleway", sans-serif;
+	
+}
+
+.sombra {
+	text-decoration: underline;
+	top: 2%;
+	position: relative;
+	
+}
+
+#login {
+	padding: 18px;
+	color: #674ea7;
+	background: #FFA500; 
+	z-index: 9999;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.caronabottom{
+	font-size: 16px;
+	background: #FFA500;
+	padding: 10px;
+	width: 35%;
+	font-weight: 600;
+	margin: 0 auto;
+	
+}
+.nos{
+	width: 100%;
+	margin: 0 auto;
+	display: block;
+	
+}
+
+.banner {
+	width: 100%;
+}
+
 body{
-	background-image: url("https://image.freepik.com/fotos-gratis/sun-no-horizonte-da-estrada_1088-57.jpg");
+	
+	background-image: url("https://image.freepik.com/fotos-gratis/seta-de-madeira-branca-para-a-direcao-da-maneira_1304-3648.jpg");
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
+	background-position: center center;
 	
-	
+}
+
+#inicio {
+	font-family: "Courgette", cursive;
 }
 .full-height {
 	height: 100vh;
+	
 }
 
 .flex-center {
@@ -33,73 +86,94 @@ body{
 .top-right {
 	width: 100%;
 	position: absolute;
-	height: 6vh;
+	height: 6%;
 	top: 0%;
 	background: #674ea7;
 	text-align: right;
 	padding-top: 10px;
+	position: fixed;
+	z-index: 9999;
 }
 
+.gradiente{
+	background: linear-gradient(#FFF, #DDF);
+}
 .content {
 	text-align: center;
 }
 
 .title {
 	font-size: 84px;
+	font-family: 'Raleway', sans-serif;
+	color: #FFF;
+	
 }
 
 .m-b-md {
 	margin-bottom: 30px;
 }
 .conteudo{
-	width: 90%;
+	width: 60%;
 	margin: 0 auto;
-	background: #FFF;
+	color: #000;
 	text-align:justify;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	
 }
 
 .links > a {
-	color: #F2B959;
+	color: #FFA500;
 	padding: 0 25px;
 	font-size: 12px;
 	font-weight: 600;
 	letter-spacing: .1rem;
-	text-decoration: none;
 	text-transform: uppercase;
+	
 }
 
-.meuMenu >a {
-    color: #F2B959;
+.meuMenu > a {
+    color: #FFA500;
 	padding: 5px 25px;
 	font-size: 12px;
 	font-weight: 600;
-	letter-spacing: .1rem;
-	text-decoration: none;
+	letter-spacing: 1rem;
 	text-transform: uppercase;
 	background: #674ea7;
-	border-radius: 10px;
 	margin: 10px;
+
+
 	
 	
 }
-.fixar {
-    position:fixed;
-    top: 0%;
-	z-index: 9999;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	background: #674ea7;
-	height: 6vh;
-	padding-top: 10px;
-	text-align: center
-}
+
 
 .hidden {
 	display: none;
+	z-index: 9999;
 }
 
-.show > .hidden {
-	display: inline;
+
+h1  {
+	font-family: 'Courgette', cursive;
 }
+
+footer{
+	background: #000;
+	font-family: 'Raleway', sans-serif;
+	width: 100%;
+	height: 5%;
+	text-align: center;
+	padding-top: 5px;
+}
+
+.logo {
+	width: 205;
+	height: 215px;
+	position: relative;
+	left: -10px;
+}
+#final {
+	margin-right: 150px;
+}
+

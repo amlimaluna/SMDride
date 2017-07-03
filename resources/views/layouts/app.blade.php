@@ -16,8 +16,34 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @include('partials.styles')
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link href="{{ asset('/images/favicon.png') }}" rel="shortcut icon">
+	<style>
+	[data-tooltip] {
+	  position: relative;
+	  font-weight: bold;
+	}
 
-    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}"/>
+	[data-tooltip]:after {
+	  display: none;
+	  position: absolute;
+	  top: -5px;
+	  padding: 5px;
+	  border-radius: 3px;
+	  left: calc(100% + 2px);
+	  content: attr(data-tooltip);
+	  white-space: nowrap;
+	  background-color: #674ea7;
+	  color: White;
+	}
+
+	[data-tooltip]:hover:after {
+	  display: block;
+	}
+	
+	</style>
+	
+	
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -32,13 +58,13 @@
 <!-- DOC: Apply "page-full-width" class to the body element to have full width page without the sidebar menu -->
 <body class="page-md page-header-fixed page-full-width page-sidebar-hide page-sidebar-closed-hide-logo">
 
-<div class="page-header md-shadow-z-1-i navbar navbar-fixed-top">
+<div class="page-header md-shadow-z-1-i navbar navbar-fixed-top" style="background-color:#674ea7">
     <!-- BEGIN HEADER INNER -->
     <div class="page-header-inner">
         <!-- BEGIN LOGO -->
-        <div class="page-logo">
+      <div class="page-logo">
             <a href="{{ url('/') }}">
-                {{ config('app.name') }}
+                <img src = "{{ asset('/images/logorealoficial.png') }}" style= "height: 50px; position: fixed; left: 2%; top: 1%; z-index: 100000;"/>
             </a>
         </div>
         <!-- END LOGO -->
@@ -52,20 +78,22 @@
         <div class="page-top">
 
             <!-- BEGIN TOP NAVIGATION MENU -->
-            <div class="top-menu">
+            <div class="top-menu" >
                 <ul class="nav navbar-nav pull-right">
                     <li class="separator hide"></li>
                     <li class="dropdown dropdown-user">
                         <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
                            data-close-others="true">
-                            <span class="username username-hide-on-mobile">{{ Auth::user()->name }} </span>
+                            <span class="username username-hide-on-mobile" style="color:#FFA500; font-size:18px; font-family: 'Raleway', sans-serif;"> <i class="fa fa-user"></i>{{ Auth::user()->name }} </span>
                         </a>
                         <ul class="dropdown-menu dropdown-menu-default">
                             <li>
-                                <a href="{{ route('logout') }}"
-                                   onclick="event.preventDefault();document.getElementById('logout-form').submit();">
-                                    <i class="icon-key"></i> Sair
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST"
+							
+			
+                                <a href="{{ url('/logout') }}"
+                                   onclick="event.preventDefault();document.getElementById('logout-form').submit();" style="font-size:18px; font-family: 'Raleway', sans-serif">
+                                    <i class="fa fa-power-off"></i> <strong>Sair </strong>
+                                    <form id="logout-form" action="{{ url('/logout') }}" method="POST"
                                           style="display: none;">
                                         {{ csrf_field() }}
                                     </form>
@@ -102,9 +130,9 @@
     </div>
     <div class="scroll-to-top">
         <i class="icon-arrow-up"></i>
+		
     </div>
 </div>
-
 
 @include('partials.scripts')
 </body>

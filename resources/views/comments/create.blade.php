@@ -2,12 +2,15 @@
     {{ csrf_field() }}
 
     <div class="input-group">
-        <div class="input-group-btn">
-            <button type="submit" class="btn btn-primary">Comentar</button>
-        </div>
+    
         <div class="form-group">
-            <input type="text" class="form-control" name="text" placeholder="Digite seu comentário"/>
+            <input type="text" class="form-control" name="text" placeholder="Demonstre seu interesse nessa carona"/>
             @include('partials.input-errors', ['input' => 'text'])
+        </div>
+		
+		
+		    <div class="input-group-btn">
+            <button type="submit" class="btn btn-info" style="background: #FFA500">Comentar</button>
         </div>
     </div>
 

@@ -31,7 +31,7 @@ class RidesManager implements IRidesRepository
     {
         return Ride
             ::upToDate()
-            ->orderBy('date', 'desc')
+            ->orderBy('date', 'asc')
             ->paginate($paginationResults);
     }
 

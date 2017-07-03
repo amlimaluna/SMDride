@@ -33,3 +33,4 @@ class CommentsController extends Controller
         return redirect()->back()->with('success', 'messages.success.deleted-comment');
     }
 }
+

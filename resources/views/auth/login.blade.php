@@ -16,19 +16,18 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @include('partials.styles')
-
-    <link rel="shortcut icon" href="favicon.ico"/>
+	<link href="{{ asset('/images/favicon.png') }}" rel="shortcut icon">
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
-<body class="page-md login">
+<body class="page-md login" style="background: #674ea7 !important">
 <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
 <div class="menu-toggler sidebar-toggler">
 </div>
 
 <div class="logo">
     <a href="{{ url('/') }}">
-        {{ config('app.name') }}
+        <img src = "{{ asset('/images/logorealoficial.png') }}" style="height:80px"/> 
     </a>
 </div>
 
@@ -37,7 +36,7 @@
     <form class="login-form" action="{{ route('login') }}" method="post">
         {{ csrf_field() }}
 
-        <h3 class="form-title">Entrar</h3>
+        <h3 class="form-title" style="color: #674ea7">Entrar</h3>
         <div class="alert alert-danger display-hide">
             <button class="close" data-close="alert"></button>
             <span>
@@ -47,7 +46,7 @@
             <!--ie8, ie9 does not support html5 placeholder, so we just show field title for that-->
             <label class="control-label visible-ie8 visible-ie9">Usuário</label>
             <input class="form-control form-control-solid placeholder-no-fix" type="text" autocomplete="off"
-                   placeholder="Usuário" name="username"/>
+                   placeholder="Usuário" name="username" value="{{old('username')}}"/>
             @include('partials.input-errors', ['input' => 'username'])
         </div>
         <div class="form-group">
@@ -56,7 +55,7 @@
                    placeholder="Senha" name="password"/>
         </div>
         <div class="form-actions">
-            <button type="submit" class="btn btn-success uppercase">Login</button>
+            <button type="submit" class="btn btn-success uppercase" style="background: #FFA500">Login</button>
             <label class="rememberme check">
                 <input type="checkbox" name="remember" value="1"/>Lembrar de mim </label>
         </div>
@@ -69,7 +68,7 @@
 
 </div>
 
-<div class="copyright">
+<div class="copyright" style="color: #FFF !important">
     {{ date('Y') }} &copy; {{ config('app.name') }}
 </div>
 

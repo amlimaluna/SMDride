@@ -71,6 +71,7 @@ class RidesController extends Controller
         return view('rides.show', compact('ride'));
     }
 
+	
     /**
      * Show the form for editing the specified resource.
      *
@@ -107,4 +108,13 @@ class RidesController extends Controller
         $ride->delete();
         return redirect()->back()->with('success', 'messages.success.deleted-ride');
     }
+
+	public function addPassenger (Ride $ride, RideRequest $request)
+	{
+	$ride->passengers()->attach($user->id);
+	$user_id = $request->get('user_id'); 
+	
+	} 
+	
 }
+
