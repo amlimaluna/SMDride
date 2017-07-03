@@ -68,14 +68,17 @@ h4 {
             {{ $comment->text }}   
 			@if(Auth::user()->id==$ride->user_id)
 	
-<form method="post" action=" action {{ ('RidesController@addPassenger/$ride->id') }}">	
-	 {{ csrf_field() }}
-	 <a class="btn btn-info" name="passengers" type="submit" style="background-color:#FFA500">
-				<i class="fa fa-thumbs-o-up">  </i> Tornar passageiro </a>
-	  <input type="hidden" name="user_id" value="$user->id" >
+	<form method="post" action="{{ action ('RidesController@addPassenger', $ride->id) }}">	
+			{{ csrf_field () }}
+	 
+			<button type="submit"  class="btn btn-info" name="passengers" style="background-color:#FFA500">
+				<i class="fa fa-thumbs-o-up">  </i>
+					Tornar passageiro 
+			</button>
 
-		
-		 </form>
+			<input type="hidden" name="user_id" value="$user_id">
+		  
+	</form>
 
 		
 			@endif
