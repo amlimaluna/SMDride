@@ -58,6 +58,18 @@ class RidePolicy
     }
 
     /**
+     * Determine whether the user can add a passenger to the ride.
+     *
+     * @param User $user
+     * @param Ride $ride
+     * @return bool
+     */
+    public function addPassenger(User $user, Ride $ride)
+    {
+        return $this->belongsTo($user, $ride);
+    }
+
+    /**
      * @param User $user
      * @param Ride $ride
      * @return bool

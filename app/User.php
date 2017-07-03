@@ -6,6 +6,9 @@ use SMDRide\Ride;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
+/**
+ * @property int id
+ */
 class User extends Authenticatable
 {
     use Notifiable;

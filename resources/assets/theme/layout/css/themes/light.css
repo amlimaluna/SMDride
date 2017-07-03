@@ -15,6 +15,18 @@ body.page-md {
   background: #f3f5f9;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: #674ea7;
+}
+
+h1 {
+  font-family: 'Courgette', cursive;
+}
+
+h4 {
+  font-family: 'Raleway', sans-serif;
+}
+
 /*********** 
 Page Header
 ***********/

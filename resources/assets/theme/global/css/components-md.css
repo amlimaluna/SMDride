@@ -4871,8 +4871,9 @@ Portlets
   padding: 7px 0 5px 0;
 }
 .portlet.box > .portlet-body {
-  background-color: #fff;
-  padding: 10px;
+  background-color: #F5F5DC;
+  padding: 10px 20px;
+  font-size: 18px;
 }
 .portlet.box.portlet-fullscreen > .portlet-body {
   padding: 10px;
@@ -13860,8 +13861,7 @@ Purple Soft
 /* General Element */
 .bg-purple-soft {
   border-color: #8877a9 !important;
-  background-image: none !important;
-  background-color: #8877a9 !important;
+  background: #8877a9 none !important;
   color: #FFFFFF !important;
 }
 
@@ -13881,4 +13881,27 @@ Transparent Button
 .btn-transparent.btn {
   background: transparent;
   color: #888;
+}
+
+/** TOOLTIP **/
+[data-tooltip] {
+  position: relative;
+  font-weight: bold;
+}
+
+[data-tooltip]:after {
+  display: none;
+  position: absolute;
+  top: -5px;
+  padding: 5px;
+  border-radius: 3px;
+  left: calc(100% + 2px);
+  content: attr(data-tooltip);
+  white-space: nowrap;
+  background-color: #674ea7;
+  color: White;
+}
+
+[data-tooltip]:hover:after {
+  display: block;
 }

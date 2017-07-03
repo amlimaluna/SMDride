@@ -8,8 +8,7 @@
             @include('partials.input-errors', ['input' => 'text'])
         </div>
 		
-		
-		    <div class="input-group-btn">
+        <div class="input-group-btn">
             <button type="submit" class="btn btn-info" style="background: #FFA500">Comentar</button>
         </div>
     </div>

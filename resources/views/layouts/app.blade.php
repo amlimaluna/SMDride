@@ -16,34 +16,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     @include('partials.styles')
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
+
     <link href="{{ asset('/images/favicon.png') }}" rel="shortcut icon">
-	<style>
-	[data-tooltip] {
-	  position: relative;
-	  font-weight: bold;
-	}
 
-	[data-tooltip]:after {
-	  display: none;
-	  position: absolute;
-	  top: -5px;
-	  padding: 5px;
-	  border-radius: 3px;
-	  left: calc(100% + 2px);
-	  content: attr(data-tooltip);
-	  white-space: nowrap;
-	  background-color: #674ea7;
-	  color: White;
-	}
-
-	[data-tooltip]:hover:after {
-	  display: block;
-	}
-	
-	</style>
-	
-	
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -118,7 +95,11 @@
     <div class="page-content-wrapper">
         <div class="page-content">
 
-            @yield('content')
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    @yield('content')
+                </div>
+            </div>
 
         </div>
     </div>
