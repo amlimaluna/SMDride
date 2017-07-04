@@ -1,6 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
+
+
+
     <div>
         <div class="row">
             <div class="col-lg-12 margin-tb">
@@ -24,7 +27,7 @@
                           style="font-size: 16px !important; font-family: 'Raleway', cursive"><i
                                 class="fa fa-info-circle fa-lg" aria-hidden="true" style="color: #000"></i></span></p>
                 <div class="caption"
-                     style="font-family: 'Courgette', cursive; font-size:25px; color: #674ea7; font-weight: 600">
+                     style="font-size:25px; font-family: 'Raleway', sans-serif; color: #674ea7; font-weight: 600; width:100% !important">
                     <i class="fa fa-id-card" aria-hidden="true" style="color: #674ea7"></i>
                     <p id="titulo">Forneça mais detalhes da sua viagem: </p>
                 </div>

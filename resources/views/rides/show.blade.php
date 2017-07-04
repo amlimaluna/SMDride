@@ -2,10 +2,11 @@
 
 @section('content')
 
+
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div>
-                <h1> Embarque nessa carona </h1>
+                <h1 style="font-family: 'Courgette', cursive; font-size:60px;"> Embarque nessa carona </h1>
             </div>
 
             <div class="pull-right">
@@ -23,9 +24,9 @@
                 <span data-tooltip="Comunique-se com o motorista da carona através de comentários e ele decidirá quem dará carona! Matenha o bom senso ☺"
                       style="font-size: 16px !important; font-family: 'Raleway', cursive"><i
                             class="fa fa-info-circle fa-lg" aria-hidden="true"></i></span></p>
-                    <div class="caption" style="line-height: normal !important">
-                        <i class="fa fa-map-marker" aria-hidden="true" style="color:#674ea7; padding: 15px;"></i>
-                        <p id="titulo">Destino: {{ $ride->address }}
+                    <div class="caption" style="line-height: normal !important; color:#674ea7; font-size: 20px; width:80%; font-family: 'Raleway', sans-serif;">
+                        <i class="fa fa-map-marker" aria-hidden="true" style=" padding: 15px;"></i>
+                        <p id="titulo"><h3>Destino: {{ $ride->address }}</h3>
 
                     </div>
                     <br><br>
