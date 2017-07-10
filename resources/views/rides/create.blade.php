@@ -8,7 +8,7 @@
         <div class="row">
             <div class="col-lg-12 margin-tb">
                 <div>
-                    <h2 style="font-family: 'Courgette', cursive; font-size: 60px; text-align: center !important;">
+                    <h2 style="font-family: 'Courgette', cursive; font-size: 60px; text-align: center !important; letter-spacing: -3px;">
                         Ofereça sua Carona</h2>
                 </div>
                 <br>

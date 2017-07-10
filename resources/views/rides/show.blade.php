@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div>
-                <h1 style="font-family: 'Courgette', cursive; font-size:60px;"> Embarque nessa carona </h1>
+                <h1 style="font-family: 'Courgette', cursive; font-size:60px; letter-spacing: -3px;"> Embarque nessa carona </h1>
             </div>
 
             <div class="pull-right">
@@ -32,7 +32,7 @@
                     <br><br>
                 </div>
 
-                <div class="portlet-body">
+                <div class="portlet-body" style="background-color:#F5F5DC">
                     <p><b>Motorista:</b> {{ $ride->driver->name }}</p>
                     <p><b>Data de Partida:</b> {{ $ride->date->format('d/m/Y H:i') }}</p>
                     <p><b>Passageiros:</b> {{ $ride->passengers->pluck('name')->implode(', ') }}</p>

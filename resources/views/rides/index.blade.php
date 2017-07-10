@@ -4,7 +4,7 @@
 
 	<div class="page-title text-center" style="margin-bottom: 30px">
 
-        <h1 style="font-family: 'Courgette', cursive; font-size:60px;">Mural de Caronas</h1>
+        <h1 style="font-family: 'Courgette', cursive; font-size:60px; letter-spacing: -3px;">Mural de Caronas</h1>
 		<br>
         <a href="{{ route('rides.create') }}" class="btn purple" style="background-color:#FFA500; ">
             <i class="fa fa-car"></i>
@@ -33,8 +33,8 @@
 
                             </a>
                         </div>
-                    </div>
-                    <div class="portlet-body">
+                    </div> 
+                    <div class="portlet-body" style="background-color:#F5F5DC">
                         <p><b>Motorista:</b> {{ $ride->driver->name }}</p>
                         <p><b>Data de Partida:</b> {{ $ride->date->format('d/m/Y H:i') }}</p>
                         <p><b>Passageiros:</b> {{ $ride->passengers->pluck('name')->implode(', ') }}</p>
